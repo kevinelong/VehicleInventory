@@ -22,7 +22,8 @@ public class Vehicle {
     }
 
     public String toString(){
-        return String.format("%d %s %s %d %.2f",
+        return String.format(
+                "%d %s %s %d %.2f",
                 this.vehicleId,
                 this.makeModel,
                 this.color,

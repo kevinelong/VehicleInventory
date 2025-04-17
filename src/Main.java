@@ -8,8 +8,16 @@ public class Main {
         }
     }
 
-    public static void searchByMakeOrModel(Vehicle[] vehicles) {
-        System.out.println("2. Search by Make/Model:");
+    public static void searchByMakeOrModel(Vehicle[] vehicles, Scanner in, int counter) {
+        System.out.print("2. Search by Make/Model: ");
+        String mm = in.nextLine();// goble up last line from integer
+        mm = in.nextLine();
+        for (int i = 0; i < counter; i++) {
+            Vehicle v = vehicles[i];
+            if(v.getMakeModel().equalsIgnoreCase(mm)) {
+                System.out.printf("%d: %s\n", i, v);
+            }
+        }
     }
 
     public static void searchByPriceRange(Vehicle[] vehicles) {
@@ -62,7 +70,7 @@ public class Main {
                     Main.listAllVehicles(vehicles);
                     break;
                 case 2:
-                    Main.searchByMakeOrModel(vehicles);
+                    Main.searchByMakeOrModel(vehicles, in, counter);
                     break;
                 case 5:
                     Main.addVehicle(vehicles, counter++); //inc counter
