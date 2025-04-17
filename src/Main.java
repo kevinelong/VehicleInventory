@@ -65,7 +65,8 @@ public class Main {
                     Main.searchByMakeOrModel(vehicles);
                     break;
                 case 5:
-                    Main.addVehicle(vehicles, counter++);
+                    Main.addVehicle(vehicles, counter++); //inc counter
+                    break;
                 default:
                     System.out.println("NO SUCH COMMAND AS: " + command);
             }
